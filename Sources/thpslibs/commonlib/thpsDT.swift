@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: DATE TIME
 //--------------------------------------
-struct thpsDT{
+public struct thpsDT{
     private static var DFL:[String:DateFormatter] = [:]
     public  static var Calendarlib: Calendar = Calendar(identifier: .iso8601)
     
