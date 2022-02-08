@@ -1,7 +1,7 @@
 import Foundation
 
 public struct thpslibs {
-    public private(set) var version = "0.1.0"
+    public private(set) var version = "0.1.2"
     public var ver:String{
         self.version
     }

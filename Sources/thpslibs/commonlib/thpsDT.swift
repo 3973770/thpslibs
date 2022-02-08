@@ -139,7 +139,11 @@ public struct thpsDT{
         return ret;
     }
     
-    public static func DT_DisplayUTC(_ dt:Date) -> String{
+    public static func DT_time(_ hhmmss:String) -> Date{
+        return DT_YYYYMMDDHHmmss("20000101\(hhmmss)")
+    }
+    
+    public static func DisplayUTC(_ dt:Date) -> String{
         let format = "E, d MMM yyyy HH:mm:ss O"
         var DF:DateFormatter?
         if DFL.keys.contains(format) {
@@ -156,11 +160,11 @@ public struct thpsDT{
     }
     
     // Display date time with format from enum thpsDTDisplayFormat
-    public static func DT_Display(_ dt:Date,_ dtf:thpsDTDisplayFormat) -> String{
+    public static func Display(_ dt:Date,_ dtf:thpsDTDisplayFormat) -> String{
         return DT_STR_FORMAT(dt,dtf.rawValue)
     }
     // Display date time with format like string
-    public static func DT_Display(_ dt:Date,_ dtf:String) -> String{
+    public static func Display(_ dt:Date,_ dtf:String) -> String{
         return DT_STR_FORMAT(dt,dtf)
     }
 }
